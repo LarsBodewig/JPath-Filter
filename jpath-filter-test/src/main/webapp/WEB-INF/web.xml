@@ -27,4 +27,8 @@
 		<servlet-name>TestServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestServlet</servlet-name>
+		<url-pattern>/no_filter</url-pattern>
+	</servlet-mapping>
 </web-app>

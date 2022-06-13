@@ -13,11 +13,14 @@ public class TestServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
-    JSONObject json = new JSONObject();
-    json.appendField("hello", "world");
+    JSONObject sub = new JSONObject();
+    sub.appendField("world", "!");
+
+    JSONObject root = new JSONObject();
+    root.appendField("hello", sub);
 
     PrintWriter writer = response.getWriter();
-    writer.append(json.toJSONString());
+    writer.append(root.toJSONString());
     writer.flush();
   }
 }
